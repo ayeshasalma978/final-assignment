@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "1ee85e62-3c57-48cb-bcec-8226aaaf443d",
+		"name": "EdenRobe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($email_1:String!,$password_1:String!,$guest_quote_id_1:String){generateCustomerToken(email:$email_1,password:$password_1,guest_quote_id:$guest_quote_id_1){token}}",
+						"variables": "{\n    \"email_1\" : \"ayeshasalma978@gmail.com\",\n    \"guest_quote_id_1\":\"9PR0YuXMb8sUMhwnO3E7EdTn0EvQEySd\",\n    \"password_1\":\"$Test123\"\n}"
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edenrobe.com/graphql",
+					"protocol": "https",
+					"host": [
+						"edenrobe",
+						"com"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sku",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					},
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://edenrobe.com/graphql?hash=3506082994&url_1=%22product/ewu22v8-25004-unstitched-magenta-embroidered-cottel-3-piece%22&_currency=%22%22",
+					"protocol": "https",
+					"host": [
+						"edenrobe",
+						"com"
+					],
+					"path": [
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "hash",
+							"value": "3506082994"
+						},
+						{
+							"key": "url_1",
+							"value": "%22product/ewu22v8-25004-unstitched-magenta-embroidered-cottel-3-piece%22"
+						},
+						{
+							"key": "_currency",
+							"value": "%22%22"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
